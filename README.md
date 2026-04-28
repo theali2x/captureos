@@ -157,7 +157,7 @@ Idea: a tiny habit tracker that uses voice notes
 /normal
 ```
 
-For the full setup flow, see `QUICKSTART.md`.
+For the full setup flow, see `QUICKSTART.md`. For calendar, email, and messaging access, see `SETUP_INTEGRATIONS.md`.
 
 ## Repository structure
 
@@ -170,6 +170,7 @@ CaptureOS/
 ├── templates/               # Markdown inbox and command templates
 ├── config/                  # Example configuration
 ├── examples/                # Example capture flows
+├── SETUP_INTEGRATIONS.md    # Calendar, email, and messaging setup
 ├── scripts/                 # install, validate, and secret scan scripts
 └── docs/                    # optional integration notes
 ```

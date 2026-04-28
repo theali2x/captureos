@@ -34,7 +34,7 @@ for basket in "Task / Reminder" "Event / Meeting" "Idea / Note"; do
   fi
 done
 
-PRIVATE_TERM_PATTERN='[Pp][Rr][Ii][Mm][Ee]|[Tt][Hh][Ee][Aa][Ll][Ii]2x|[Ss][Ee][Nn][Tt][Ii][Nn][Ee][Ll]2x|[Gg][Mm][Aa][Ii][Ll]|/Users/[Nn][Oo][Dd][Ee]|[Aa][Ll][Ii][Kk][Bb]|[Bb][Ll][Oo][Ff][Ii][Nn]|[Rr][Aa][Yy][Aa][Dd]|[Ee][Ll][Dd][Aa][Rr]'
+PRIVATE_TERM_PATTERN='[Pp][Rr][Ii][Mm][Ee]|[Tt][Hh][Ee][Aa][Ll][Ii]2x|[Ss][Ee][Nn][Tt][Ii][Nn][Ee][Ll]2x|/Users/[Nn][Oo][Dd][Ee]|[Aa][Ll][Ii][Kk][Bb]|[Bb][Ll][Oo][Ff][Ii][Nn]|[Rr][Aa][Yy][Aa][Dd]|[Ee][Ll][Dd][Aa][Rr]'
 if grep -RInE "$PRIVATE_TERM_PATTERN" \
   "$ROOT" \
   --exclude-dir=.git \

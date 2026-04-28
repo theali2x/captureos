@@ -137,16 +137,23 @@ docs/native-hermes-commands.md
 
 Apply it only if you are comfortable maintaining a local Hermes patch.
 
-## 9. Optional: calendar integration
+## 9. Optional: calendar, email, and messaging integrations
 
-CaptureOS does not ship credentials or calendar adapters. Configure your calendar provider through Hermes or your own automation layer.
+CaptureOS does not ship credentials, tokens, or account access. Configure providers through Hermes or your own automation layer.
 
-Recommended behavior:
+See the full integration guide:
 
-- create clear, non-conflicting calendar items directly
-- ask before conflicts, deletes, reschedules, or ambiguous events
-- use 1 hour for ordinary meetings, calls, appointments, and timed reminders
-- use 2 hours only for clearly larger events
+```text
+SETUP_INTEGRATIONS.md
+```
+
+It covers:
+
+- Google Calendar / Google Workspace OAuth
+- Gmail access
+- IMAP/SMTP email through Himalaya
+- Hermes messaging gateway setup
+- safe test flow and security notes
 
 ## 10. Try a full test
 

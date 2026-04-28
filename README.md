@@ -177,16 +177,16 @@ CaptureOS/
 
 ## Security
 
-This repository should contain only reusable system instructions, templates, examples, and scripts. Do not commit real tokens, OAuth files, account identifiers, calendar IDs, private vault data, client data, or personal contact data.
+CaptureOS is private-first by design. It ships reusable instructions, templates, examples, and scripts — never credentials or private user data.
 
-Before publishing or accepting contributions, run:
+Before using it with real accounts, read `SECURITY.md` and keep tokens, OAuth files, account identifiers, calendar IDs, private vaults, and contact data out of the repository.
+
+Maintainers can run the included checks with:
 
 ```bash
 ./scripts/validate.sh
 ./scripts/secret-scan.sh
 ```
-
-For public release, also run a dedicated scanner such as gitleaks or trufflehog. See `SECURITY.md`.
 
 ## Status
 

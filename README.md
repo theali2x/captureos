@@ -1,5 +1,7 @@
 # CaptureOS
 
+![CaptureOS visual overview](assets/captureos-hero.svg)
+
 CaptureOS is a lightweight, private-first capture router for Hermes Agent.
 
 It gives your AI assistant one simple job: take messy natural-language input and route it into the right place — a task/reminder, a calendar event/meeting, or an idea/note.

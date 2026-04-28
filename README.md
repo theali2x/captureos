@@ -2,7 +2,17 @@
 
 CaptureOS is a lightweight, private-first capture router for Hermes Agent.
 
-It turns messy natural-language input — quick texts, voice notes, meeting notes, pasted ideas, reminders — into exactly one of three simple baskets:
+It gives your AI assistant one simple job: take messy natural-language input and route it into the right place — a task/reminder, a calendar event/meeting, or an idea/note.
+
+```text
+Input:  Dentist tomorrow 3pm
+Output: Event / Meeting → create a 1-hour calendar event for tomorrow at 3pm
+
+Input:  Idea: build a weekly client report generator
+Output: Idea / Note → save to the idea inbox or the best matching project note
+```
+
+CaptureOS turns quick texts, voice notes, meeting notes, pasted ideas, and reminders into exactly one of three simple baskets:
 
 1. Task / Reminder
 2. Event / Meeting

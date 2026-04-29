@@ -30,4 +30,12 @@ Default: 2 hours when context implies a longer block.
 Task: submit invoice Friday
 ```
 
-Default: all-day.
+Default: completable task due Friday, not a calendar event.
+
+## Timed task / reminder
+
+```text
+Reminder: call Omar Friday 11am
+```
+
+Default: completable task due Friday; preserve `11am` in title/notes if the task provider does not support exact due-time reminders.

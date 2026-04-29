@@ -13,12 +13,13 @@
 
 ## Defaults
 
-- Timed Task / Reminder: 1 hour
-- Date-only Task / Reminder: all-day
-- Undated Task / Reminder: tomorrow all-day when clearly actionable, even without an explicit `Task:`/`Reminder:` prefix in Capture Mode
-- Meeting / Call: 1 hour
-- Ordinary Event / Appointment: 1 hour
-- Large Event: 2 hours only when obvious
+- Task / Reminder: route to a completable task system when available, not an ordinary calendar event.
+- Timed Task / Reminder: task due date plus preserved time in title/notes if due-time reminders are not supported.
+- Date-only Task / Reminder: task due on that date.
+- Undated Task / Reminder: task due tomorrow when clearly actionable, even without an explicit `Task:`/`Reminder:` prefix in Capture Mode.
+- Meeting / Call: calendar event, 1 hour.
+- Ordinary Event / Appointment: calendar event, 1 hour.
+- Large Event: calendar event, 2 hours only when obvious.
 
 ## Inbox files
 

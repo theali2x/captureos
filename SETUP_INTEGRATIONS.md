@@ -2,14 +2,14 @@
 
 CaptureOS is the routing layer. It does not include credentials, tokens, or account access.
 
-To let an assistant create calendar events, read/send email, or run from messaging apps, configure those integrations in Hermes Agent or in your own automation layer.
+To let an assistant create calendar events, completable tasks/reminders, read/send email, or run from messaging apps, configure those integrations in Hermes Agent or in your own automation layer.
 
 ## Recommended setup path
 
 1. Install Hermes Agent.
 2. Install CaptureOS skills.
 3. Create optional Markdown inbox files.
-4. Connect a calendar provider if you want events/reminders created automatically.
+4. Connect calendar and task providers if you want events plus completable tasks/reminders created automatically.
 5. Connect email only if you want email-aware capture or send/reply workflows.
 6. Connect a messaging gateway if you want to capture from Telegram, Discord, Slack, etc.
 7. Test with safe examples before using real data.
@@ -70,25 +70,26 @@ If not authenticated, create a Google Cloud OAuth Desktop client, download the c
 
 ```bash
 $GSETUP --client-secret /path/to/client_secret.json
-$GSETUP --auth-url --services calendar
+$GSETUP --auth-url --services calendar,tasks
 $GSETUP --auth-code "PASTE_THE_REDIRECT_URL_OR_CODE"
 $GSETUP --check
 ```
 
-For both Gmail and Calendar:
+For Gmail, Calendar, and Tasks:
 
 ```bash
-$GSETUP --auth-url --services email,calendar
+$GSETUP --auth-url --services email,calendar,tasks
 ```
 
 Do not commit the OAuth JSON file or generated token file.
 
-### Calendar behavior CaptureOS expects
+### Calendar/task behavior CaptureOS expects
 
-- Clear, non-conflicting calendar items can be created directly.
+- Event / Meeting captures become calendar events.
+- Task / Reminder captures become completable tasks when a task provider is configured; do not create them as ordinary calendar events unless the user explicitly asks for a time-block.
 - Ask before conflicts, deletes, reschedules, or ambiguous events.
-- Default reminders: 24 hours and 1 hour before, if supported.
-- Ordinary events, appointments, calls, meetings, and timed reminders default to 1 hour.
+- Default calendar reminders: 24 hours and 1 hour before, if supported.
+- Ordinary events, appointments, calls, and meetings default to 1 hour.
 - Large events default to 2 hours only when context clearly implies it.
 
 ## 4. Email access

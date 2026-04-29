@@ -45,8 +45,9 @@ Explicit prefixes still work in normal mode: `Task:`, `Reminder:`, `Meeting:`, `
 ## Default destinations
 
 Task / Reminder:
-- Clear dated or timed items go to the configured calendar/task system when available.
-- Open/undated items that should not be calendared go to the configured Task / Reminder inbox.
+- Clear dated or timed items go to the configured task system when available, so they can be marked complete.
+- Do not create tasks/reminders as ordinary calendar events unless the user explicitly asks for a time-block or the wording is clearly a meeting/call/event.
+- Open/undated items that should not be tasked/calendar-routed go to the configured Task / Reminder inbox.
 
 Event / Meeting:
 - Clear scheduled blocks go to the configured calendar when available.
@@ -62,10 +63,10 @@ Idea / Note:
 - Meeting / Call: 1 hour
 - Ordinary Event / Appointment: 1 hour
 - Large Event: 2 hours only when context clearly implies a longer block, such as dinner, conference, party, workshop, or multi-hour activity
-- Timed Task / Reminder: 1 hour
-- Date-only Task / Reminder: all-day
-- Undated Task / Reminder: tomorrow all-day when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly in Capture Mode
-- Default reminders: 24 hours and 1 hour before, when the calendar provider supports it
+- Timed Task / Reminder: task due date plus preserved time in title/notes if the task provider does not support due-time reminders
+- Date-only Task / Reminder: task due on that date
+- Undated Task / Reminder: task due tomorrow when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly in Capture Mode
+- Default calendar reminders: 24 hours and 1 hour before, for events/meetings when the calendar provider supports it
 
 ## Ask-first policy
 

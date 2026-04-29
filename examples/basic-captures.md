@@ -11,7 +11,7 @@ Follow up with Omar Friday 11am
 Expected:
 
 - Basket: Task / Reminder
-- Calendar if configured: Friday 11:00-12:00
+- Task system if configured: due Friday; preserve `11am` in title/notes if exact due-time reminders are not supported
 
 ## Event / Meeting
 

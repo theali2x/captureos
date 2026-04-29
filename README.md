@@ -4,7 +4,7 @@
 
 CaptureOS is a lightweight, private-first capture router for Hermes Agent.
 
-It gives your AI assistant one simple job: take messy natural-language input and route it into the right place — a task/reminder, a calendar event/meeting, or an idea/note.
+It gives your AI assistant one simple job: take messy natural-language input and route it into the right place — a completable task/reminder, a calendar event/meeting, or an idea/note.
 
 ```text
 Input:  Dentist tomorrow 3pm
@@ -26,7 +26,7 @@ The point is not to create another dumping ground. CaptureOS gives an AI assista
 
 Most capture systems either over-classify everything or let notes pile up forever. CaptureOS keeps the user-facing model intentionally small:
 
-- Tasks and reminders are things to do or remember.
+- Tasks and reminders are things to do or remember; when a task provider is configured, they should be completable tasks, not ordinary calendar events.
 - Events and meetings are things that occupy time on a calendar.
 - Ideas and notes are durable knowledge, context, links, reflections, or project material.
 
@@ -72,8 +72,8 @@ CaptureOS classifies it as:
 
 ```text
 Basket: Task / Reminder
-Default duration: 1 hour if placed on a calendar
-Action: create a reminder/task block if calendar integration is configured, otherwise save to the Task / Reminder inbox
+Default route: create a completable task if task integration is configured
+Action: preserve any mentioned time in the task title/notes if the task provider does not support due-time reminders; otherwise save to the Task / Reminder inbox
 ```
 
 ### Example 2: event / meeting
@@ -125,10 +125,10 @@ Idea / Note: weekly client report generator idea
 
 ## Default timing rules
 
-- Timed Task / Reminder: 1 hour
-- Date-only Task / Reminder: all-day
-- Undated Task / Reminder: tomorrow all-day when clearly actionable, even without an explicit `Task:`/`Reminder:` prefix in Capture Mode
-- Meeting / Call: 1 hour
+- Timed Task / Reminder: task due date plus preserved time in title/notes if due-time reminders are not supported
+- Date-only Task / Reminder: task due on that date
+- Undated Task / Reminder: task due tomorrow when clearly actionable, even without an explicit `Task:`/`Reminder:` prefix in Capture Mode
+- Meeting / Call: calendar event, 1 hour
 - Ordinary Event / Appointment: 1 hour
 - Large Event: 2 hours only when context clearly implies a longer block
 - Calendar reminders: 24 hours and 1 hour before, when supported by the calendar provider

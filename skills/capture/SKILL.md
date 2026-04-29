@@ -29,12 +29,14 @@ Until the user invokes `/normal` or clearly asks to stop capture mode:
 
 ## Defaults
 
-- Timed Task / Reminder: 1 hour
-- Date-only Task / Reminder: all-day
-- Undated Task / Reminder: tomorrow all-day when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly
-- Meeting / Call: 1 hour
-- Ordinary Event / Appointment: 1 hour
-- Large Event: 2 hours only when context clearly implies it
+- Task / Reminder: create in the configured task system when available, so the item can be marked complete.
+- Timed Task / Reminder: keep as a task with the due date; preserve the mentioned time in the task title/notes if the provider does not support due-time reminders.
+- Date-only Task / Reminder: task due on that date.
+- Undated Task / Reminder: task due tomorrow when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly.
+- Only create a calendar event for a task/reminder when the user explicitly asks for a time-block or the wording is clearly a meeting/call/event.
+- Meeting / Call: calendar event, 1 hour.
+- Ordinary Event / Appointment: calendar event, 1 hour.
+- Large Event: calendar event, 2 hours only when context clearly implies it
 
 ## Response style
 

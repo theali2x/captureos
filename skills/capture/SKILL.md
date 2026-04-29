@@ -31,7 +31,7 @@ Until the user invokes `/normal` or clearly asks to stop capture mode:
 
 - Timed Task / Reminder: 1 hour
 - Date-only Task / Reminder: all-day
-- Undated Task / Reminder: tomorrow all-day
+- Undated Task / Reminder: tomorrow all-day when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly
 - Meeting / Call: 1 hour
 - Ordinary Event / Appointment: 1 hour
 - Large Event: 2 hours only when context clearly implies it

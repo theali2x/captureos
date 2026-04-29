@@ -127,7 +127,7 @@ Idea / Note: weekly client report generator idea
 
 - Timed Task / Reminder: 1 hour
 - Date-only Task / Reminder: all-day
-- Undated Task / Reminder: tomorrow all-day
+- Undated Task / Reminder: tomorrow all-day when clearly actionable, even without an explicit `Task:`/`Reminder:` prefix in Capture Mode
 - Meeting / Call: 1 hour
 - Ordinary Event / Appointment: 1 hour
 - Large Event: 2 hours only when context clearly implies a longer block

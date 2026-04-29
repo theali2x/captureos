@@ -64,7 +64,7 @@ Idea / Note:
 - Large Event: 2 hours only when context clearly implies a longer block, such as dinner, conference, party, workshop, or multi-hour activity
 - Timed Task / Reminder: 1 hour
 - Date-only Task / Reminder: all-day
-- Undated Task / Reminder: tomorrow all-day
+- Undated Task / Reminder: tomorrow all-day when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly in Capture Mode
 - Default reminders: 24 hours and 1 hour before, when the calendar provider supports it
 
 ## Ask-first policy

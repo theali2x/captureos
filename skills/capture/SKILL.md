@@ -32,6 +32,7 @@ Until the user invokes `/normal` or clearly asks to stop capture mode:
 - Task / Reminder: create in the configured task system when available, so the item can be marked complete.
 - Timed Task / Reminder: keep as a task with the due date; preserve the mentioned time in the task title/notes if the provider does not support due-time reminders.
 - Date-only Task / Reminder: task due on that date.
+- Recurring completable Task / Reminder: use native task recurrence when the provider/API supports it. If the provider UI supports recurrence but the API does not, avoid bulk-creating long horizons by default; create a small idempotent scheduled check that runs on each occurrence date, verifies the next occurrence exists, creates it only if missing, and reports created vs skipped.
 - Undated Task / Reminder: task due tomorrow when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly.
 - Only create a calendar event for a task/reminder when the user explicitly asks for a time-block or the wording is clearly a meeting/call/event.
 - Meeting / Call: calendar event, 1 hour.

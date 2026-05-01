@@ -46,6 +46,7 @@ Explicit prefixes still work in normal mode: `Task:`, `Reminder:`, `Meeting:`, `
 
 Task / Reminder:
 - Clear dated or timed items go to the configured task system when available, so they can be marked complete.
+- Recurring completable tasks should use native task-provider recurrence when the API supports it. If the provider UI supports recurrence but the API does not, do not bulk-create long horizons by default. Instead, use a small idempotent scheduled check that runs on each occurrence date, verifies whether the next occurrence already exists, creates it only if missing, and reports created vs skipped.
 - Do not create tasks/reminders as ordinary calendar events unless the user explicitly asks for a time-block or the wording is clearly a meeting/call/event.
 - Open/undated items that should not be tasked/calendar-routed go to the configured Task / Reminder inbox.
 
@@ -65,6 +66,7 @@ Idea / Note:
 - Large Event: 2 hours only when context clearly implies a longer block, such as dinner, conference, party, workshop, or multi-hour activity
 - Timed Task / Reminder: task due date plus preserved time in title/notes if the task provider does not support due-time reminders
 - Date-only Task / Reminder: task due on that date
+- Recurring completable Task / Reminder: prefer native task recurrence; otherwise create a scheduled verifier/generator that looks one recurrence ahead and is duplicate-safe. Example: for a task due on the 1st and 16th, run checks on the 1st and 16th that ensure next month's matching date exists.
 - Undated Task / Reminder: task due tomorrow when the item is clearly actionable, even if the user did not write `Task:` or `Reminder:` explicitly in Capture Mode
 - Default calendar reminders: 24 hours and 1 hour before, for events/meetings when the calendar provider supports it
 
